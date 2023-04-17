@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+
+@@include('html/index/head.html', {title: 'Main-Page'})
+
+<body>
+    <div class="main-conteiner">
+        <div class="action-box">
+            <a href="createElement.html" class="action-box__button button">Добавить</a>
+        </div>
+        <div class="current-tasks tasks"></div>
+        <div class="completed-tasks tasks"></div>
+    </div>
+    @@include('html/index/footer.html')
+    <script type="module" src="main.js"></script>
+</body>
+
+</html>

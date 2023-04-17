@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/index/head.html', {title: 'Autorisation-Page'})
+
+<body>
+    <div class="main-conteiner-sign-in">
+        <div class="conteiner-sign-in">
+            <form class="conteiner-sign-in-form form" id="autorisationForm">
+                <h1 class="header">Авторизация</h1>
+                    <input placeholder="Логин" class="input-box__input" id="login" type="text" name="login">
+                    <input placeholder="Пароль" class="input-box__input" id="password" type="text" name="password">
+                <div class="radio-buttons">
+                    <div class = "radio-button">
+                        <input name = "type" type = "radio" class = "radio-button__input" id = "manager"/>
+                        <label class = "radio-button__label" for = "manager">Менеджер</label>
+                    </div>
+                    <div class = "radio-button">
+                        <input name = "type" type = "radio" class = "radio-button__input" id = "mover"/>
+                        <label class = "radio-button__label" for = "mover">Грузчик</label>
+                    </div>
+                </div>
+                <div class="conteiner-sign-in__buttons-container">
+                    <button class="form__submit button">sing in</button>
+                    <a href="sing-up.html" class="form__link">Sing up</a>
+                    <p class="conteiner-sign-in__paragraph"></p>
+                </div>
+            </form>
+            <div class="conteiner-sign-in-image-box">
+                <i class="fa-solid fa-user conteiner-sign-in-image-box__image"></i>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="index.js"></script>
+    @@include('html/index/footer.html')
+</body>
+
+</html>

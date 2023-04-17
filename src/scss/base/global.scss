@@ -1,0 +1,445 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: gray;
+    margin: 0 auto;
+    max-width: $max-width;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+.form-interactive-box {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.header {
+    margin-bottom: 40px;
+    padding-top: 20px;
+}
+
+
+.conteiner-sing-up {
+    padding: 20px 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    @include table {
+        grid-template-columns: 1fr;
+    }
+
+    gap: 30px;
+}
+
+.conteiner-sing-up-form {}
+
+.conteiner-sing-up-description-box {
+    background-image: url(img/warehouse.webp);
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    height: calc(100vh - 40px);
+
+    @include table {
+        display: none;
+    }
+
+    ;
+}
+
+.main-conteiner-sign-in {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+
+.conteiner-sign-in {
+    padding: 0px 20px;
+    display: grid;
+    width: 100%;
+
+    @include table {
+        grid-template-columns: 1fr;
+    }
+
+    ;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 40px;
+
+    &__buttons-container {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+    }
+}
+
+.footer {
+    padding: 100px 20px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.conteiner-sign-in-image-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include table {
+        display: none;
+    }
+
+    &__image {
+        font-size: 16rem;
+    }
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    &__input {
+        padding: 12px;
+        border: none;
+        background-color: rgba(0, 0, 0, 0.1);
+        border-radius: 0.3em;
+        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+
+        &::placeholder {
+            font-size: 15px;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__label {
+        padding-left: 5px;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(20px);
+        transition: all 0.4s ease-in-out;
+    }
+}
+
+.label-show {
+    opacity: 1;
+    transform: translateY(0px);
+    visibility: visible;
+}
+
+.conteiner-sign-in-navigation-box {
+    &__header {
+        display: inline-block;
+        margin-right: 20px;
+    }
+
+    &__button {
+        display: inline-block;
+    }
+}
+
+.button {
+    width: fit-content;
+    padding: .7em 1.4em;
+    border: none;
+    border-radius: 0.3em;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.1);
+    color: black;
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.05);
+    }
+
+
+}
+
+.task-main-box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.main-conteiner {
+    padding: 0px 100px;
+    padding-top: 20px;
+}
+
+.current-tasks {
+    margin-bottom: 40px;
+}
+
+.tasks {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.current-task {}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+
+    &__button {}
+}
+
+.task-description {}
+
+.current-task-description {
+    &__header {}
+
+    &__price {}
+}
+
+.completed-tasks {
+    margin-bottom: 100px;
+}
+
+.completed-task {}
+
+.action-box {
+    margin-bottom: 40px;
+    text-align: right;
+}
+
+
+.main-coteiner-createElemet {
+    height: 100vh;
+    display: grid;
+    padding: 10px;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-content: center;
+    gap: 30px;
+}
+
+.peopleBox {
+    &__checkbox {
+        display: none;
+
+        &:checked+.peopleBox__label>.id-card {
+            background-color: rgba($color: blue, $alpha: 0.6);
+            color: white;
+        }
+    }
+
+    &__label {}
+}
+
+.id-card {
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+
+    &__header {}
+
+    &__text {}
+}
+
+.mover-form-box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.main-form-box__interactive {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.radio-button {
+    &__input {
+        display: none;
+
+        &:checked+.radio-button__label {
+            background-color: rgba($color: blue, $alpha: 0.6);
+        }
+    }
+
+    &__label {
+        transition: all 0.3s ease-in-out;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+        color: white;
+    }
+}
+
+.radio-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.conteiner-sign-in-form {
+    gap: 30px;
+}
+
+.main-conteiner-user {}
+
+.user-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.user-card {
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.accept-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    &__current-task {}
+
+    &__current-task-price {}
+
+}
+
+.accept-card-task-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.settings-card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.statistic-card {}
+
+.add-token-box {}
+
+.settings-card-item {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+
+#checkbox-button {
+    display: none;
+
+    &:disabled+.button {
+        color: gray;
+        cursor: not-allowed;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+}
+
+.main-container-profile {
+    text-align: center;
+
+    &__header {
+        margin-bottom: 20px;
+    }
+}
+
+.main-action-box {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px 40px;
+}
+
+.radio-buttons-profile {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px 20px;
+}
+
+.create-token-box {
+    margin-bottom: 20px;
+
+}
+
+.settings-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+
+}
+
+.statistic-box{
+    display: flex;
+    flex: 1 1;
+    padding: 40px;
+    height: 400px;
+    max-width: 600px;
+    gap: 20px;
+    align-items: flex-end;
+    margin: 0 auto;
+    div{
+        width: 100%;
+        height: 50%;
+        background-color: red;
+        border-radius: 10px;
+    }
+}

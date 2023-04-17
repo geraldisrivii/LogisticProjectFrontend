@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профиль компании</title>
+    <link rel="stylesheet" href="main.min.css">
+</head>
+
+<body>
+    <div class="main-container-profile">
+        <h1 class="main-container-profile__header header">Профиль компании</h1>
+        <div class="settings-profile">
+            <form class="create-token-box settings-box">
+                <h3 class="create-token-box__header">Создать токен</h3>
+                <input placeholder="логин" type="text" class="input-box__input" name="login">
+                <input placeholder="пароль" type="text" class="input-box__input" name="password">
+                <div class="radio-buttons">
+                    <div class="radio-button">
+                        <input name="type" type="radio" class="radio-button__input" id="manager" />
+                        <label class="radio-button__label" for="manager">Менеджер</label>
+                    </div>
+                    <div class="radio-button">
+                        <input name="type" type="radio" checked class="radio-button__input" id="mover" />
+                        <label class="radio-button__label" for="mover">Грузчик</label>
+                    </div>
+                </div>
+                <button class="button">Сгенерировать токен</button>
+            </form>
+            <form class="verification-token-box settings-box">
+                <h3 class="verification-token-box__header">Активировать аккаунт авторизованного менеджера</h3>
+                <input placeholder="токен" type="text" class="input-box__input" name="token">
+                <button class="button">Активировать</button>
+            </form>
+        </div>
+        <h2 class="main-container-profile__header">Тип данных</h2>
+        <div class="main-action-box">
+            <div class="radio-buttons radio-buttons-profile">
+                <div class="radio-button">
+                    <input name="type" type="radio" class="radio-button__input radio-filter" id="count_paid_money" />
+                    <label class="radio-button__label" for="count_paid_money">Выплаченные средства</label>
+                </div>
+                <div class="radio-button">
+                    <input checked name="type" type="radio" class="radio-button__input radio-filter" id="completed_tasks" />
+                    <label class="radio-button__label" for="completed_tasks">Выполненные задачи</label>
+                </div>
+            </div>
+        </div>
+        <h2 class="main-container-profile__header">Период выборки</h2>
+        <div class="main-action-box">
+            <div class="radio-buttons radio-buttons-profile">
+                <div class="radio-button">
+                    <input checked name="period" type="radio" class="radio-button__input radio-filter" id="mounth" />
+                    <label class="radio-button__label" for="mounth">месяц</label>
+                </div>
+                <div class="radio-button">
+                    <input name="period" type="radio" class="radio-button__input radio-filter" id="week" />
+                    <label class="radio-button__label" for="week">неделя</label>
+                </div>
+            </div>
+        </div>
+        <div class="statistic-box">
+        </div>
+    </div>
+    <script type="module" src="profile.js"></script>
+</body>
+
+</html>

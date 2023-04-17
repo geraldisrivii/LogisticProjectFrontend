@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/index/head.html', {title: 'Create Element'})
+<body>
+    <div class="main-coteiner-createElemet">
+        <div class="main-form-box">
+            <form id="CreateTasksForm" class="form">
+                <input placeholder="Название" class="input-box__input" type="text" name="title">
+                <input placeholder="Стоимость" class="input-box__input" type="text" name="price">
+                <div class="main-form-box__interactive">
+                    <button id="createTaskButton" class="button">Создать</button>
+                    <p class="main-form-box-paragraph"></p>
+                </div>
+            </form>
+        </div>
+        <div class="mover-form-box">
+        </div>
+    </div>
+    @@include('html/index/footer.html')
+    <script type="module" src="createElement.js"></script>
+</body>
+</html>

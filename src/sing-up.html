@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="main.min.css">
+</head>
+
+<body>
+    <div class="conteiner-sing-up">
+        <form class="form conteiner-sing-up-form">
+            <div class="conteiner-sign-in-navigation-box">
+                <h1 class="conteiner-sign-in-navigation-box__header header">Регистрация</h1>
+            </div>
+            <div class="input-box">
+                <input class="input-box__input" id="name" placeholder="Имя" type="text" name="name">
+                <label class="input-box__label" for="name">d</label>
+            </div>
+            <div class="input-box">
+                <input class="input-box__input" id="lastName" type="text" placeholder="Фамилия" name="lastName">
+                <label class="input-box__label" for="lastName">d</label>
+            </div>
+            <div class="input-box">
+                <input class="input-box__input" id="login" type="text" placeholder="Логин" name="login">
+                <label class="input-box__label" for="login">d</label>
+            </div>
+            <div class="input-box">
+                <input class="input-box__input" id="password" type="text" placeholder="Пароль" name="password">
+                <label class="input-box__label" for="password">d</label>
+            </div>
+            <div class="radio-buttons">
+                <div class="radio-button">
+                    <input name="type" type="radio" class="radio-button__input" id="manager" />
+                    <label class="radio-button__label" for="manager">Менеджер</label>
+                </div>
+                <div class="radio-button">
+                    <input name="type" type="radio" checked class="radio-button__input" id="mover" />
+                    <label class="radio-button__label" for="mover">Грузчик</label>
+                </div>
+            </div>
+            <div class="form-interactive-box">
+                <button class="button">Отправить</button>
+                <p class="form-interactive-box__indicator"></p>
+            </div>
+        </form>
+        <div class="conteiner-sing-up-description-box"></div>
+    </div>
+    <script type="module" src="signUp.js"></script>
+    @@include('html/index/footer.html')
+</body>
+
+</html>
